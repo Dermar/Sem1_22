@@ -1,0 +1,5 @@
+problems:
+
+1. responsivity:
+2. use flexbox to adjust page heights to size of screen
+3. nav column- figure out how to move everything to the right

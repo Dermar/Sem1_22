@@ -1,0 +1,114 @@
+Question 1
+Items are added in this order: A, B, A, C, A, D, D
+with lines 11 and 13 re-adding the items at those indices in the list
+The descending iterator method used in line 16 means that items are printed in
+reverse order: D, D, A, C, A, B, A
+
+
+Question 2
+line 4: semicolon should be a comma
+line 6: = should be ==
+line 11: smaller should be an int since 
+that's the number that the method signature says it should return
+line 14: should either use else if or remove the condition
+
+
+Question 3
+a: Wolf
+b: Human
+
+
+Question 4
+public static void readLongLines(String fileName, int length){
+        
+    try{
+        File f = new File(fileName); 
+        Scanner scan = new Scanner(f);
+        if (length < 0){
+            System.out.println("Invalid length");
+            return;
+        }
+        while (scan.hasNextLine()){
+            String line = scan.nextLine();
+            String[] chars = line.split("");
+
+            if (chars.length > length){
+                System.out.println(line);
+            }
+        }
+        scan.close();
+
+    }
+    catch(FileNotFoundException e){
+        System.out.println("No such file");
+    }
+    
+    }
+
+
+Question 5
+public class Car {
+    private String reg;
+    private double hRent;
+
+    public Car(String reg, double hRent){
+        this.reg = reg;
+        this.hRent = hRent;
+    }
+
+    public double getHRent(){
+        return hRent;
+    }
+}
+
+
+class CarRentals{
+    Car[] cars;
+
+    public CarRentals(Car[] cars){
+        this.cars = cars;
+    }
+
+
+    public Car cheapest(Car one, Car two){
+        if (one.getHRent() < two.getHRent()){
+            return one;
+        }
+        else{
+            return two;
+        }
+    }   
+}
+
+Question 6
+import java.util.ArrayList;
+public abstract class Storage<T> {
+    ArrayList<T> elems;
+
+    public Storage(){
+        ArrayList<T> elems = new ArrayList<T>();
+    }
+
+    public abstract void print();
+    public void add(T elem){
+        if (elem == null){
+            return;
+        }
+        for (int i = 0; i < elems.size(); i++){
+            if (elem.equals(elems.get(i))){
+                return;
+            }
+        }
+        elems.add(elem);
+    }
+}
+
+class MyStorage extends Storage{
+    public void print(){
+        System.out.print(this);
+    }
+}
+
+
+Question 7
+

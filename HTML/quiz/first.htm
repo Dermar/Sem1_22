@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+    <title>Hyperlinks</title>
+    <link rel="stylesheet" href="URL">
+ </head>
+ <body>
+    <h1>Hyperlinks on the WWW</h1>
+     <p>This example illustrates the use of hyperlinks.</p>
+     <p><a href="http://www.nsa.gov">National Security Agency</a></p>
+     <p><a href="firstpage.html">Another page on the same website</a></p>
+     <p><a href="#bottom">Click here</a> to go to the bottom of the page</p>
+    
+     <img src="computer.gif" alt="Awesome Computer" />
+    
+    <!--Description List-->
+    <dl>
+        <dt>Tea</dt>
+        <dd>The most refreshing drink.</dd>
+        <dt>Coffee</dt>
+        <dd>Want to have when you are sleepy.</dd>
+        <dt>Water</dt>
+        <dd>Life saver!</dd>
+    </dl>
+
+     <form id="customer" action="submit.htm">
+             <fieldset>
+              <legend>Your details</legend>
+               <ol>
+                     <li>
+        13               <label for="nameFirst">First Name</label>
+        14               <input id="nameFirst" name="nameFirst" placeholder="Jane" required="" autofocus="" type="text" />
+        15              </li>
+        16       </ol>
+        17     </fieldset>     
+        18      <fieldset>
+        19             <legend>Ownership Details</legend>
+        20             <ol>
+        21                 <li>
+        22                     <label class="transport" for="car">Car</label>
+        23                     <input id="car" name="transportType" type="checkbox" />
+        24                 </li>       
+        25                 <li>
+        26                     <label class="transport" for="bicycle">Bicycle</label>
+        27                     <input id="bicycle" name="transportType" type="checkbox" />
+        28                 </li>           
+        29                 <li>
+        30                     <label class="transport" for="aeroplane">Aeroplane</label>
+        31                     <input id="aeroplane" name="transportType" type="checkbox" />
+        32                 </li>           
+        33             </ol>
+        34         </fieldset>
+        35         <fieldset>
+        36             <legend>Study Habits</legend>
+        37             <ol>
+        38                 <li>
+        39                     <label for="study">I Study</label>
+        40                     <select id="study">
+        41                         <option>I don't study</option>
+        42                         <option>&lt; 1 hr / week</option>
+        43                         <option>&lt; 5 hr / week</option>
+        44                         <option>&lt; 10 hr / week</option>
+        45                         <option>&gt; 10 hr / week</option>
+        46                    </select>
+        47                 </li>
+        48             </ol>
+        49         </fieldset>     
+        50         <fieldset>
+        51             <button type="submit">Submit</button>
+        52             <button type="reset">Clear</button>
+        53         </fieldset>
+        54     </form>
+
+    <p>This is the bottom of the page.</p>
+    <h2><a id="bottom">The bottom of the page</a></h2>
+
+ </body>
+</html>

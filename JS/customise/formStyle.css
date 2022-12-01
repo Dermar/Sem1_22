@@ -1,0 +1,13 @@
+input.colour, select { 
+	position: relative; 
+	left: 200px;
+}
+
+label { 
+	width: 250px; 
+	position: absolute;
+}
+
+ol li { 
+	padding: 5px 0px; 
+}

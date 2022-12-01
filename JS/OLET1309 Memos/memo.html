@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Memorabilia</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="memo_style.css"/>
+	    <script src="save_settings.js"></script>
+    </head>
+    <body onload="loadSettings();">
+        <textarea id="display_box" contenteditable></textarea>
+        <input id="input_choose_file" type="file"/>
+        <button id="btn_load_file">Load File</button>
+        <button id="update_file">Save Loaded Memo</button>
+        <button id="create_file"> Create Memo</button> <!-- creating and saving new memos only works on non-firefox browsers--> 
+        <button id="save_file"> Save Created Memo</button>
+        
+        <!-- Allow the user to customise their memos (taken from Module 6 'customise' problem answer)
+        The way I've implemented this means that cookies only work in the firefox browser-->
+        <h1>Settings</h1>
+        
+        <form  id="preferences">
+            <fieldset>
+                <legend>Colours</legend>
+                <ol>
+                    <li>
+                        <!-- BACKGROUND COLOUR -->
+                        <label for="background_color">Memo Background Colour</label>
+                        <input type="color" name="background_color" id="background_color" class="choice">
+                    </li>
+                    <li>
+                        <!-- TEXT COLOUR -->
+                        <label for="text_color">Text colour</label>
+                        <select type="color" name="text_color" id="text_color" class="choice">
+                            <option value="#ffffff" >White</option>
+                            <option value="#000000" >Black</option>
+                        </select>
+                        
+                    </li>
+                    <li>
+                        <!-- TEXT SIZE -->
+                        <label for="text_size">Text size</label>
+                        <select name="text_size" id="text_size" class="choice">
+                            <option value = "xx-small">xx-small</option>
+                            <option value = "x-small">x-small</option>
+                            <option value = "small">small</option>
+                            <option value = "medium">medium</option>
+                            <option value = "large">large</option>
+                            <option value = "x-large">x-large</option>
+                            <option value = "xx-large">xx-large</option>
+                            <option value = "xxx-large">xxx-large</option>
+                        </select>
+                    </li>
+                </ol>
+        
+            </fieldset>
+            
+            <div id="settings_button" onclick="updateSettings();">Save Changes</div>
+        </form>
+    </body>
+    
+    <script src="load_file.js"></script>
+    
+</html>

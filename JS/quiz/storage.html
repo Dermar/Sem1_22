@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<script>
+
+    function processItem(newElem) {
+        if (localStorage.getItem("myStorageItem") == newElem){
+            alert("You have not updated the item");
+        }
+        else{
+            alert("Current items: "+ newElem + ", Storage: " + localStorage.getItem("myStorageItem"));
+            localStorage.setItem("myStorageItem", newElem);
+        }
+    }
+
+</script>
+
+</head>
+
+<body>
+
+    <h1>Check your items</h1>
+
+    <form name="myForm" action="index.html">
+
+        <p>My current item: <input type="text" id="myItem"> </p>
+
+        <input type="button" value="Show storage" id="showItem" onclick ="processItem(document.getElementById('myItem').value)">
+
+        </p>
+
+    </form>
+
+</body>
+
+</html>

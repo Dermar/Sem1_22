@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Preferences</title>	
+	<link href="formStyle.css" rel="stylesheet" />
+	
+	<script src="jsfunctions.js"></script>
+	<script src="myscript.js"></script>
+	
+</head>
+
+<body onload="loadSettings();">
+    <h1>Customise Preferences</h1>
+    
+	<form id="preferences" onSubmit="updateSettings();">
+		<fieldset id="colors" class="">
+			<legend>Colours</legend>
+			<ol>
+				<li>
+					<!-- BACKGROUND COLOUR -->
+					<label for="background_color">Background colour</label>
+					<input type="color" name="background_color" value="" id="background_color" class="colour">
+				</li>
+				<li>
+					<!-- TEXT COLOUR -->
+					<label for="text_color">Text colour</label>
+					<input type="color" name="text_color" value="" id="text_color" class="colour">
+				</li>
+				<li>
+					<!-- TEXT SIZE -->
+					<label for="text_size">Text size</label>
+
+					<select name="text_size" id="text_size" class="colour">
+						<option value="12">12px</option>
+						<option value="16">16px</option>
+						<option value="20">20px</option>
+						<option value="24">24px</option>
+					</select>
+				</li>
+			</ol>
+ 
+		</fieldset>
+      
+		<input type="submit" value="Save changes">
+    </form>
+  
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title> What is JavaScript? </title>
+
+<script>
+    function checkAnswer(quizForm, correctAnswer) {
+    var answers = document.getElementsByName("mcqChoice");
+
+        if (!answers[0].checked && !answers[1].checked && !answers[2].checked){
+           alert("Please make a selection");
+        }
+
+        var answer;
+        if (answers[0].checked){
+            answer = answers[0];
+        }
+        if (answers[1].checked){
+            answer = answers[1];
+        }
+        if (answers[2].checked){
+            answer = answers[2];
+        }
+
+        else if (correctAnswer == answer.value){
+            alert("'B' is correct!");
+        }
+        else{
+           alert(answer.value + " is incorrect ;(");
+        }
+  }
+</script>
+
+</head>
+
+<body>
+
+<form onSubmit="checkAnswer(this,'B');">
+<input type="RADIO" value="A" name="mcqChoice">
+A. Another name for Java<br>
+
+<input type ="RADIO" value ="B" name="mcqChoice">
+B. A scripting language mostly for the web<br> 
+   
+<input type ="RADIO" value ="C" name="mcqChoice">
+C. When you use Java without compiling<br><br>
+
+<input type ="SUBMIT" value ="Submit Answer">
+</form>
+
+</body>
+
+</html>
